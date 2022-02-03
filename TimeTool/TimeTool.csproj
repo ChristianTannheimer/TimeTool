@@ -6,6 +6,11 @@
     <Nullable>enable</Nullable>
     <UseWindowsForms>true</UseWindowsForms>
     <ImplicitUsings>enable</ImplicitUsings>
+    <ApplicationIcon>clock_hour_minute_second_time_timer_watch_icon_123193.ico</ApplicationIcon>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="clock_hour_minute_second_time_timer_watch_icon_123193.ico" />
+  </ItemGroup>
 
 </Project>

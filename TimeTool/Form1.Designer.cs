@@ -29,90 +29,34 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.dTP1 = new System.Windows.Forms.DateTimePicker();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.aktualisierenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dTP2 = new System.Windows.Forms.DateTimePicker();
             this.txtZeitpunkt = new System.Windows.Forms.TextBox();
             this.txtZeitAusgabe = new System.Windows.Forms.RichTextBox();
+            this.contextMenuStrip2 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.ausgabeÖffnenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.backupÖffnenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ordnerÖffnenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.BtnAusgabe = new System.Windows.Forms.Button();
             this.BtnLaden = new System.Windows.Forms.Button();
             this.BtnClear = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.aktualisierenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.txtKw = new System.Windows.Forms.TextBox();
             this.contextMenuStrip1.SuspendLayout();
+            this.contextMenuStrip2.SuspendLayout();
             this.SuspendLayout();
             // 
             // dTP1
             // 
-            this.dTP1.Location = new System.Drawing.Point(265, 31);
+            this.dTP1.ContextMenuStrip = this.contextMenuStrip1;
+            this.dTP1.Location = new System.Drawing.Point(189, 12);
             this.dTP1.Name = "dTP1";
-            this.dTP1.Size = new System.Drawing.Size(500, 47);
+            this.dTP1.Size = new System.Drawing.Size(576, 47);
             this.dTP1.TabIndex = 0;
             this.dTP1.ValueChanged += new System.EventHandler(this.dTP1_ValueChanged);
-            // 
-            // dTP2
-            // 
-            this.dTP2.CustomFormat = "HH:mm";
-            this.dTP2.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dTP2.Location = new System.Drawing.Point(60, 114);
-            this.dTP2.Name = "dTP2";
-            this.dTP2.ShowUpDown = true;
-            this.dTP2.Size = new System.Drawing.Size(170, 47);
-            this.dTP2.TabIndex = 1;
-            // 
-            // txtZeitpunkt
-            // 
-            this.txtZeitpunkt.Location = new System.Drawing.Point(265, 114);
-            this.txtZeitpunkt.Name = "txtZeitpunkt";
-            this.txtZeitpunkt.Size = new System.Drawing.Size(500, 47);
-            this.txtZeitpunkt.TabIndex = 2;
-            this.txtZeitpunkt.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtZeitpunkt_KeyDown);
-            // 
-            // txtZeitAusgabe
-            // 
-            this.txtZeitAusgabe.Location = new System.Drawing.Point(62, 197);
-            this.txtZeitAusgabe.Name = "txtZeitAusgabe";
-            this.txtZeitAusgabe.Size = new System.Drawing.Size(703, 738);
-            this.txtZeitAusgabe.TabIndex = 3;
-            this.txtZeitAusgabe.Text = "";
-            this.txtZeitAusgabe.TextChanged += new System.EventHandler(this.txtZeitAusgabe_TextChanged);
-            // 
-            // BtnAusgabe
-            // 
-            this.BtnAusgabe.Location = new System.Drawing.Point(69, 990);
-            this.BtnAusgabe.Name = "BtnAusgabe";
-            this.BtnAusgabe.Size = new System.Drawing.Size(188, 58);
-            this.BtnAusgabe.TabIndex = 4;
-            this.BtnAusgabe.Text = "Ausgabe";
-            this.BtnAusgabe.UseVisualStyleBackColor = true;
-            this.BtnAusgabe.Click += new System.EventHandler(this.BtnAusgabe_Click);
-            // 
-            // BtnLaden
-            // 
-            this.BtnLaden.Location = new System.Drawing.Point(335, 994);
-            this.BtnLaden.Name = "BtnLaden";
-            this.BtnLaden.Size = new System.Drawing.Size(188, 58);
-            this.BtnLaden.TabIndex = 5;
-            this.BtnLaden.Text = "Laden";
-            this.BtnLaden.UseVisualStyleBackColor = true;
-            this.BtnLaden.Click += new System.EventHandler(this.BtnLaden_Click);
-            // 
-            // BtnClear
-            // 
-            this.BtnClear.Location = new System.Drawing.Point(580, 1005);
-            this.BtnClear.Name = "BtnClear";
-            this.BtnClear.Size = new System.Drawing.Size(188, 58);
-            this.BtnClear.TabIndex = 6;
-            this.BtnClear.Text = "Löschen";
-            this.BtnClear.UseVisualStyleBackColor = true;
-            this.BtnClear.Click += new System.EventHandler(this.BtnClear_Click);
-            // 
-            // timer1
-            // 
-            this.timer1.Enabled = true;
-            this.timer1.Interval = 1000;
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // contextMenuStrip1
             // 
@@ -129,18 +73,118 @@
             this.aktualisierenToolStripMenuItem.Text = "Aktualisieren";
             this.aktualisierenToolStripMenuItem.Click += new System.EventHandler(this.aktualisierenToolStripMenuItem_Click);
             // 
+            // dTP2
+            // 
+            this.dTP2.ContextMenuStrip = this.contextMenuStrip1;
+            this.dTP2.CustomFormat = "HH:mm";
+            this.dTP2.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dTP2.Location = new System.Drawing.Point(12, 76);
+            this.dTP2.Name = "dTP2";
+            this.dTP2.ShowUpDown = true;
+            this.dTP2.Size = new System.Drawing.Size(171, 47);
+            this.dTP2.TabIndex = 1;
+            // 
+            // txtZeitpunkt
+            // 
+            this.txtZeitpunkt.Location = new System.Drawing.Point(189, 76);
+            this.txtZeitpunkt.Name = "txtZeitpunkt";
+            this.txtZeitpunkt.Size = new System.Drawing.Size(576, 47);
+            this.txtZeitpunkt.TabIndex = 2;
+            this.txtZeitpunkt.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtZeitpunkt_KeyDown);
+            // 
+            // txtZeitAusgabe
+            // 
+            this.txtZeitAusgabe.ContextMenuStrip = this.contextMenuStrip2;
+            this.txtZeitAusgabe.Location = new System.Drawing.Point(12, 131);
+            this.txtZeitAusgabe.Name = "txtZeitAusgabe";
+            this.txtZeitAusgabe.Size = new System.Drawing.Size(753, 738);
+            this.txtZeitAusgabe.TabIndex = 3;
+            this.txtZeitAusgabe.Text = "";
+            this.txtZeitAusgabe.TextChanged += new System.EventHandler(this.txtZeitAusgabe_TextChanged);
+            // 
+            // contextMenuStrip2
+            // 
+            this.contextMenuStrip2.ImageScalingSize = new System.Drawing.Size(40, 40);
+            this.contextMenuStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.ausgabeÖffnenToolStripMenuItem,
+            this.backupÖffnenToolStripMenuItem,
+            this.ordnerÖffnenToolStripMenuItem});
+            this.contextMenuStrip2.Name = "contextMenuStrip2";
+            this.contextMenuStrip2.Size = new System.Drawing.Size(307, 148);
+            // 
+            // ausgabeÖffnenToolStripMenuItem
+            // 
+            this.ausgabeÖffnenToolStripMenuItem.Name = "ausgabeÖffnenToolStripMenuItem";
+            this.ausgabeÖffnenToolStripMenuItem.Size = new System.Drawing.Size(306, 48);
+            this.ausgabeÖffnenToolStripMenuItem.Text = "Ausgabe öffnen";
+            this.ausgabeÖffnenToolStripMenuItem.Click += new System.EventHandler(this.ausgabeÖffnenToolStripMenuItem_Click);
+            // 
+            // backupÖffnenToolStripMenuItem
+            // 
+            this.backupÖffnenToolStripMenuItem.Name = "backupÖffnenToolStripMenuItem";
+            this.backupÖffnenToolStripMenuItem.Size = new System.Drawing.Size(306, 48);
+            this.backupÖffnenToolStripMenuItem.Text = "Backup öffnen";
+            this.backupÖffnenToolStripMenuItem.Click += new System.EventHandler(this.backupÖffnenToolStripMenuItem_Click);
+            // 
+            // ordnerÖffnenToolStripMenuItem
+            // 
+            this.ordnerÖffnenToolStripMenuItem.Name = "ordnerÖffnenToolStripMenuItem";
+            this.ordnerÖffnenToolStripMenuItem.Size = new System.Drawing.Size(306, 48);
+            this.ordnerÖffnenToolStripMenuItem.Text = "Ordner öffnen";
+            this.ordnerÖffnenToolStripMenuItem.Click += new System.EventHandler(this.ordnerÖffnenToolStripMenuItem_Click);
+            // 
+            // BtnAusgabe
+            // 
+            this.BtnAusgabe.Location = new System.Drawing.Point(12, 875);
+            this.BtnAusgabe.Name = "BtnAusgabe";
+            this.BtnAusgabe.Size = new System.Drawing.Size(246, 58);
+            this.BtnAusgabe.TabIndex = 4;
+            this.BtnAusgabe.Text = "Speichern";
+            this.BtnAusgabe.UseVisualStyleBackColor = true;
+            this.BtnAusgabe.Click += new System.EventHandler(this.BtnAusgabe_Click);
+            // 
+            // BtnLaden
+            // 
+            this.BtnLaden.Location = new System.Drawing.Point(264, 875);
+            this.BtnLaden.Name = "BtnLaden";
+            this.BtnLaden.Size = new System.Drawing.Size(243, 58);
+            this.BtnLaden.TabIndex = 5;
+            this.BtnLaden.Text = "Laden";
+            this.BtnLaden.UseVisualStyleBackColor = true;
+            this.BtnLaden.Click += new System.EventHandler(this.BtnLaden_Click);
+            // 
+            // BtnClear
+            // 
+            this.BtnClear.Location = new System.Drawing.Point(513, 875);
+            this.BtnClear.Name = "BtnClear";
+            this.BtnClear.Size = new System.Drawing.Size(250, 58);
+            this.BtnClear.TabIndex = 6;
+            this.BtnClear.Text = "Löschen";
+            this.BtnClear.UseVisualStyleBackColor = true;
+            this.BtnClear.Click += new System.EventHandler(this.BtnClear_Click);
+            // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Interval = 1000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // txtKw
             // 
-            this.txtKw.Location = new System.Drawing.Point(47, 33);
+            this.txtKw.ContextMenuStrip = this.contextMenuStrip1;
+            this.txtKw.Location = new System.Drawing.Point(12, 12);
             this.txtKw.Name = "txtKw";
-            this.txtKw.Size = new System.Drawing.Size(210, 47);
+            this.txtKw.ReadOnly = true;
+            this.txtKw.Size = new System.Drawing.Size(171, 47);
             this.txtKw.TabIndex = 8;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(17F, 41F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(889, 1181);
+            this.AutoSize = true;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.ClientSize = new System.Drawing.Size(775, 940);
             this.Controls.Add(this.txtKw);
             this.Controls.Add(this.BtnClear);
             this.Controls.Add(this.BtnLaden);
@@ -149,9 +193,12 @@
             this.Controls.Add(this.txtZeitpunkt);
             this.Controls.Add(this.dTP2);
             this.Controls.Add(this.dTP1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "TimeTool";
             this.contextMenuStrip1.ResumeLayout(false);
+            this.contextMenuStrip2.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -170,5 +217,9 @@
         private ContextMenuStrip contextMenuStrip1;
         private ToolStripMenuItem aktualisierenToolStripMenuItem;
         private TextBox txtKw;
+        private ContextMenuStrip contextMenuStrip2;
+        private ToolStripMenuItem ausgabeÖffnenToolStripMenuItem;
+        private ToolStripMenuItem backupÖffnenToolStripMenuItem;
+        private ToolStripMenuItem ordnerÖffnenToolStripMenuItem;
     }
 }
